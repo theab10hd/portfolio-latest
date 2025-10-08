@@ -1,4 +1,3 @@
-import React from "react";
 import type { PrimaryButtonProps } from "../../../utils/types";
 
 const PrimaryButton = ({ text, icon, className, link }: PrimaryButtonProps) => {
