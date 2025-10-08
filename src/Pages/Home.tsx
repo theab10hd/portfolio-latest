@@ -24,7 +24,7 @@ const Home = () => {
           </p>{" "}
           <h1 className="font-medium text-4xl md:text-7xl ">
             passionate about technology and creativity.{" "}
-            <span className="text-[var(--foreground-color)] title-font ">
+            <span className="text-[var(--foreground-color)] title-font">
               I do Web + Graphic Designing.
             </span>
           </h1>

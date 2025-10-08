@@ -5,6 +5,7 @@ import Home from "./Pages/Home";
 import Contact from "./Pages/Contact";
 import Navbar from "./Components/Navbar/Navbar";
 import DevModePrompt from "./Components/DevModePrompt";
+import { SmoothCursor } from "./Components/ui/smooth-cursor";
 
 const App = () => {
   // Change Document Title Based on Route
@@ -28,6 +29,7 @@ const App = () => {
 
   return (
     <>
+      <SmoothCursor />
       {isDevMode && !acceptedDevMode && (
         <DevModePrompt
           title="Developer Mode Enabled"
@@ -36,7 +38,6 @@ const App = () => {
           onCancel={() => setAcceptedDevMode(true)}
         />
       )}
-
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
