@@ -29,7 +29,7 @@ const Home = () => {
               I do Web + Graphic Designing.
             </span>
           </h1>
-          <div className="flex gap-8 w-full justify-between items-center mt-5">
+          <div className="flex gap-8 w-full justify-between items-center mt-4">
             <PrimaryButton
               text="Let's Talk"
               icon={<i className="fa-solid fa-arrow-right"></i>}
