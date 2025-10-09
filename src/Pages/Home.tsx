@@ -1,8 +1,9 @@
 import PrimaryButton from "../Components/Buttons/PrimaryButton";
+import Box from "../Components/Utils/Box";
 
 const Home = () => {
   return (
-    <div className="bg-[var(--background-dark)] ">
+    <div className="bg-[var(--background-dark)] z-20 relative">
       <section
         className="h-[45rem] md:h-screen relative overflow-hidden"
         id="home"
@@ -52,9 +53,47 @@ const Home = () => {
       </section>
       <hr className="h-8 bg-[var(--foreground-color)]" />
       <section
-        className="h-auto md:h-screen relative overflow-hidden"
+        className="h-auto md:h-screen relative overflow-hidden pt-24 "
         id="about"
-      ></section>
+      >
+        {/* Custom Box */}
+        <div className="absolute z-10">
+          <Box
+            width={10}
+            backgroundColor="var(--foreground-color)"
+            className="top-[0rem] left-8 opacity-60 rounded-lg"
+          />
+        </div>
+        <div className="container mx-auto p-8 text-gray-400 ">
+          <div className="grid grid-cols-2 relative z-20">
+            <div className="col-span-1">
+              <h1 className="text-4xl font-bold uppercase  underline-offset-4 underline">
+                #About Me.
+              </h1>
+              <p className="mt-4 text-justify  ">
+                <span className="text-white">
+                  {" "}
+                  I’m Abhijith Gaganan, a technology enthusiast with a deep
+                  passion for creativity and design.
+                </span>{" "}
+                I love blending logic and artistry—whether it’s building
+                functional, elegant websites or crafting eye-catching graphic
+                designs that tell a story. <br />
+                <span className="text-[var(--foreground-color)]">
+                  I currently work full-time as a Software Engineer
+                </span>
+                , where I focus on creating efficient, user-friendly solutions.
+                Alongside my job, I also take on freelance projects in web and
+                graphic design, helping brands and individuals bring their ideas
+                to life through clean code and thoughtful visuals. <br /> For
+                me, technology isn’t just a career—it’s a creative playground.
+                I’m always learning, experimenting, and pushing myself to create
+                meaningful digital experiences that connect people and ideas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
