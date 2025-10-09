@@ -25,7 +25,7 @@ const App = () => {
     }
   });
 
-  const isDevMode = import.meta.env.DEV;
+  const isDevMode = import.meta.env.VITE_IS_IN_DEVELOPMENT;
 
   return (
     <>
