@@ -29,15 +29,15 @@ const App = () => {
 
   return (
     <>
-      <SmoothCursor />
-      {isDevMode && !acceptedDevMode && (
+      {/* <SmoothCursor /> */}
+      {/* {isDevMode && !acceptedDevMode && (
         <DevModePrompt
           title="Developer Mode Enabled"
           message="This website is still under Development and you are running this portfolio in developer mode. Some features may not work as expected. Do you want to proceed?"
           onConfirm={() => setAcceptedDevMode(true)}
           onCancel={() => setAcceptedDevMode(true)}
         />
-      )}
+      )} */}
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

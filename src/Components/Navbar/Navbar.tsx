@@ -58,12 +58,12 @@ const Navbar = () => {
             className="fa-bars fa-solid fa-xl md:!hidden"
             onClick={toggleNavbar}
           ></i>
-          <i
+          {/* <i
             onClick={toggleTheme}
             className={`fa-lightbulb fa-xl  ${
               theme === "dark" ? "fa-regular " : "fa-solid"
             }`}
-          ></i>
+          ></i> */}
         </span>
       </div>
       <div

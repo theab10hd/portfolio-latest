@@ -1,9 +1,12 @@
 import PrimaryButton from "../Components/Buttons/PrimaryButton";
-import Box from "../Components/Utils/Box";
+import { webStackIcons } from "../../utils/techStackIcons";
+// import Box from "../Components/Utils/Box";
+import TechstackIcon from "../Components/Utils/TechstackIcon";
 
 const Home = () => {
   return (
     <div className="bg-[var(--background-dark)] z-20 relative">
+      {/* Hero Section */}
       <section
         className="h-[45rem] md:h-screen relative overflow-hidden"
         id="home"
@@ -52,25 +55,19 @@ const Home = () => {
         </div>
       </section>
       <hr className="h-8 bg-[var(--foreground-color)]" />
+      {/* About Section */}
       <section
-        className="h-auto md:h-screen relative overflow-hidden pt-24 "
+        className="h-auto md:h-screen relative overflow-hidden pt-24 w-screen"
         id="about"
       >
-        {/* Custom Box */}
-        <div className="absolute z-10">
-          <Box
-            width={10}
-            backgroundColor="var(--foreground-color)"
-            className="top-[0rem] left-8 opacity-60 rounded-lg"
-          />
-        </div>
-        <div className="container mx-auto p-8 text-gray-400 ">
-          <div className="grid grid-cols-2 relative z-20">
-            <div className="col-span-1">
-              <h1 className="text-4xl font-bold uppercase  underline-offset-4 underline">
-                #About Me.
+        <div className="container mx-auto text-gray-400 ">
+          <div className="grid grid-cols-2 relative z-20 gap-8">
+            {/* About Me Box */}
+            <div className="col-span-1 p-8 rounded-xl outline-1 outline-transparent hover:outline-white/30 hover:bg-linear-to-b from-white/10 to-white-5 transition-alls ease-in-out duration-300 cursor-pointer hover:scale-102">
+              <h1 className="text-4xl font-bold lowercase text-white ">
+                About Me.
               </h1>
-              <p className="mt-4 text-justify  ">
+              <p className="mt-4 text-justify text-xl">
                 <span className="text-white">
                   {" "}
                   I’m Abhijith Gaganan, a technology enthusiast with a deep
@@ -90,6 +87,28 @@ const Home = () => {
                 I’m always learning, experimenting, and pushing myself to create
                 meaningful digital experiences that connect people and ideas.
               </p>
+            </div>
+            {/* Tech Stack */}
+            <div className="col-span-1 p-8 rounded-xl flex-col items-center">
+              <h1 className="text-4xl font-bold lowercase text-white ">
+                Technologies i work with
+              </h1>
+              <div className="grid grid-cols-6 gap-4 mt-4">
+                <TechstackIcon text="Development" />
+                {Object.keys(webStackIcons).map((key) => (
+                  <TechstackIcon
+                    key={key}
+                    imageUrl={webStackIcons[key as keyof typeof webStackIcons]}
+                  />
+                ))}
+                <TechstackIcon text="Designing" />
+                {Object.keys(webStackIcons).map((key) => (
+                  <TechstackIcon
+                    key={key}
+                    imageUrl={webStackIcons[key as keyof typeof webStackIcons]}
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </div>
