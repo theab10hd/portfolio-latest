@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 const Navbar = () => {
-  const [theme, setTheme] = useState("light");
+  // const [theme, setTheme] = useState("light");
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
 
   useEffect(() => {
@@ -9,20 +9,20 @@ const Navbar = () => {
     document.body.setAttribute("data-theme", savedTheme);
   }, []);
 
-  const toggleTheme = () => {
-    const body = document.body;
-    const currentTheme = body.getAttribute("data-theme");
+  // const toggleTheme = () => {
+  //   const body = document.body;
+  //   const currentTheme = body.getAttribute("data-theme");
 
-    if (currentTheme === "dark") {
-      setTheme("light");
-      body.setAttribute("data-theme", "light");
-      localStorage.setItem("theme", "light");
-    } else {
-      setTheme("dark");
-      body.setAttribute("data-theme", "dark");
-      localStorage.setItem("theme", "dark");
-    }
-  };
+  //   if (currentTheme === "dark") {
+  //     setTheme("light");
+  //     body.setAttribute("data-theme", "light");
+  //     localStorage.setItem("theme", "light");
+  //   } else {
+  //     setTheme("dark");
+  //     body.setAttribute("data-theme", "dark");
+  //     localStorage.setItem("theme", "dark");
+  //   }
+  // };
 
   const toggleNavbar = () => {
     setIsNavbarOpen(!isNavbarOpen);

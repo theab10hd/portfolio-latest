@@ -1,16 +1,16 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import PageNotFound from "./Pages/PageNotFound";
 import Home from "./Pages/Home";
 import Contact from "./Pages/Contact";
 import Navbar from "./Components/Navbar/Navbar";
-import DevModePrompt from "./Components/DevModePrompt";
-import { SmoothCursor } from "./Components/ui/smooth-cursor";
+// import DevModePrompt from "./Components/DevModePrompt";
+// import { SmoothCursor } from "./Components/ui/smooth-cursor";
 
 const App = () => {
   // Change Document Title Based on Route
   const location = useLocation();
-  const [acceptedDevMode, setAcceptedDevMode] = useState(false);
+  // const [acceptedDevMode, setAcceptedDevMode] = useState(false);
   useEffect(() => {
     const path = location.pathname;
     switch (path) {
@@ -25,7 +25,7 @@ const App = () => {
     }
   });
 
-  const isDevMode = import.meta.env.VITE_IS_IN_DEVELOPMENT;
+  // const isDevMode = import.meta.env.VITE_IS_IN_DEVELOPMENT;
 
   return (
     <>
