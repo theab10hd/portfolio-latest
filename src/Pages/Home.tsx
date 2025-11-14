@@ -57,39 +57,70 @@ const Home = () => {
       <hr className="h-8 bg-[var(--foreground-color)]" />
       {/* About Section */}
       <section
-        className="h-auto md:h-screen relative overflow-hidden pt-24 w-screen"
+        className="h-auto md:max-h-screen relative overflow-hidden pt-24 w-screen"
         id="about"
       >
         <div className="container mx-auto text-gray-400 ">
           <div className="grid grid-cols-2 relative z-20 gap-8">
-            {/* About Me Box */}
-            <div className="col-span-1 p-8 rounded-xl outline-1 outline-transparent hover:outline-white/30 hover:bg-linear-to-b from-white/10 to-white-5 transition-alls ease-in-out duration-300 cursor-pointer hover:scale-102">
-              <h1 className="text-4xl font-bold lowercase text-white ">
-                About Me.
-              </h1>
-              <p className="mt-4 text-justify text-xl">
-                <span className="text-white">
-                  {" "}
-                  I’m Abhijith Gaganan, a technology enthusiast with a deep
-                  passion for creativity and design.
-                </span>{" "}
-                I love blending logic and artistry—whether it’s building
-                functional, elegant websites or crafting eye-catching graphic
-                designs that tell a story. <br />
-                <span className="text-[var(--foreground-color)]">
-                  I currently work full-time as a Software Engineer
-                </span>
-                , where I focus on creating efficient, user-friendly solutions.
-                Alongside my job, I also take on freelance projects in web and
-                graphic design, helping brands and individuals bring their ideas
-                to life through clean code and thoughtful visuals. <br /> For
-                me, technology isn’t just a career—it’s a creative playground.
-                I’m always learning, experimenting, and pushing myself to create
-                meaningful digital experiences that connect people and ideas.
-              </p>
+            <div className="col">
+              <div className="grid gap-8">
+                <div
+                  className="p-8 relative overflow-hidden rounded-xl outline-1 outline-transparent 
+                hover:outline-white/50 transition-all ease-in-out duration-300 cursor-pointer 
+                hover:scale-102 group"
+                >
+                  <img
+                    src="/images/my images/mine1.jpg"
+                    className="absolute inset-0 w-full h-full object-cover rounded-xl 
+               opacity-5 group-hover:opacity-20 
+               transition-all duration-300 ease-in-out grayscale-50 z-0"
+                  />
+
+                  <div
+                    className="absolute inset-0 rounded-xl 
+               bg-transparent group-hover:bg-gradient-to-b 
+               from-black/40 to-transparent 
+               transition-all duration-300 z-10"
+                  ></div>
+
+                  <div className="relative z-20">
+                    <h1 className="text-4xl font-bold lowercase text-white">
+                      About Me.
+                    </h1>
+
+                    <p className="mt-4 text-justify text-xl">
+                      <span className="text-white">
+                        I’m Abhijith Gaganan, a technology enthusiast with a
+                        deep passion for creativity and design.
+                      </span>{" "}
+                      I love blending logic and artistry—whether it’s building
+                      functional, elegant websites or crafting eye-catching
+                      graphic designs that tell a story. <br />
+                      <span className="text-[var(--foreground-color)]">
+                        I currently work full-time as a Software Engineer
+                      </span>
+                      , where I focus on creating efficient, user-friendly
+                      solutions. Alongside my job, I take on freelance projects
+                      in web and graphic design, helping brands bring their
+                      ideas to life through clean code and thoughtful visuals.{" "}
+                      <br />
+                      For me, technology isn’t just a career—it’s a creative
+                      playground. I’m always learning, experimenting, and
+                      pushing myself to build meaningful digital experiences
+                      that connect people and ideas.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="p-8 rounded-xl outline-1 outline-transparent hover:outline-white/30 hover:bg-linear-to-b from-white/10 to-white-5 transition-alls ease-in-out duration-300 cursor-pointer hover:scale-102">
+                  <h1 className="text-4xl font-bold lowercase text-white">
+                    find me
+                  </h1>
+                </div>
+              </div>
             </div>
             {/* Tech Stack */}
-            <div className="col-span-1 p-8 rounded-xl flex-col items-center">
+            <div className="col p-8 rounded-xl flex-col items-center">
               <h1 className="text-4xl font-bold lowercase text-white ">
                 Technologies i work with
               </h1>

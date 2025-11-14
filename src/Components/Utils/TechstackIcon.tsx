@@ -2,20 +2,12 @@ type TechstackIconProps = {
   text?: string;
   imageUrl?: string;
   className?: string;
-  outlineColor?: string;
-};
-
-const outlineColors: Record<string, string> = {
-  orange: "outline-orange-500/50",
-  red: "outline-red-500/50",
-  blue: "outline-blue-500/50",
 };
 
 const TechstackIcon = ({
   imageUrl = "https://dummyimage.com/600x400/000/fff",
   className = "",
   text,
-  outlineColor,
 }: TechstackIconProps) => {
   return (
     <>
@@ -28,9 +20,7 @@ const TechstackIcon = ({
         <img
           src={imageUrl}
           alt=""
-          className={`aspect-square object-cover outline-1 p-1 ${
-            outlineColor ? outlineColors[outlineColor] : "outline-white/10"
-          } rounded-lg hover:scale-105 ease-in-out duration-300 cursor-pointer ${className}`}
+          className={`aspect-square object-cover border-b border-transparent hover:border-white  outline-1 p-1 outline-white/10 hover:outline-white/30 rounded-lg hover:scale-105 transition-all ease-in-out duration-300 cursor-pointer ${className}`}
         />
       )}
     </>
