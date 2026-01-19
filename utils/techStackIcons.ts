@@ -1,4 +1,6 @@
-export interface WebStackIcons {
+import { pre } from "framer-motion/client";
+
+export interface DevStackIcons {
     react: string;
     dotnet: string;
     tailwind: string;
@@ -13,7 +15,17 @@ export interface WebStackIcons {
     css3: string;
 }
 
-export const webStackIcons: WebStackIcons = {
+export interface DesignStackIcons {
+    premierePro: string;
+    afterEffects: string;
+    photoshop: string;
+    lightroom: string;
+    illustrator: string;
+    figma: string;
+    canva: string;
+}
+
+export const devStackIcons: DevStackIcons = {
     react: "/icons/techstack/react.png",
     dotnet: "https://upload.wikimedia.org/wikipedia/commons/7/7d/Microsoft_.NET_logo.svg",
     tailwind: "https://blog.logrocket.com/wp-content/uploads/2019/07/E1G1nNb0_400x400.jpg",
@@ -28,3 +40,12 @@ export const webStackIcons: WebStackIcons = {
     git: "https://thumbs.dreamstime.com/b/astana-kazakhstan-july-git-icon-logo-vector-symbol-198642057.jpg"
 };
 
+export const designStackIcons :DesignStackIcons = {
+    premierePro: 'https://upload.wikimedia.org/wikipedia/commons/4/40/Adobe_Premiere_Pro_CC_icon.svg',
+    afterEffects: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Adobe_After_Effects_CC_icon.svg/960px-Adobe_After_Effects_CC_icon.svg.png',
+    photoshop: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/960px-Adobe_Photoshop_CC_icon.svg.png",
+    lightroom: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Adobe_Photoshop_Lightroom_CC_logo.svg/960px-Adobe_Photoshop_Lightroom_CC_logo.svg.png',
+    illustrator: "https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg",
+    figma: "https://s3-figma-hubfile-images-production.figma.com/hub/file/carousel/img/b8d00b2e389e3a38f115ea00f7dc3dff3ef4f337/dbc32aa496f21ffa8508a4f6432d1e6c6f76e3b1",
+    canva: "/icons/techstack/canva.webp",
+};  

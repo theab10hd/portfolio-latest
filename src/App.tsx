@@ -5,7 +5,7 @@ import Home from "./Pages/Home";
 import Contact from "./Pages/Contact";
 import Navbar from "./Components/Navbar/Navbar";
 // import DevModePrompt from "./Components/DevModePrompt";
-// import { SmoothCursor } from "./Components/ui/smooth-cursor";
+import { SmoothCursor } from "./Components/ui/smooth-cursor";
 
 const App = () => {
   // Change Document Title Based on Route

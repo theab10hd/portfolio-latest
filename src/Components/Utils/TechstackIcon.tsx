@@ -20,7 +20,7 @@ const TechstackIcon = ({
         <img
           src={imageUrl}
           alt=""
-          className={`aspect-square object-cover border-b border-transparent hover:border-white  outline-1 p-1 outline-white/10 hover:outline-white/30 rounded-lg hover:scale-105 transition-all ease-in-out duration-300 cursor-pointer ${className}`}
+          className={`aspect-square object-cover border-b border-transparent outline-1 p-1 outline-white/10 rounded-xl cursor-pointer ${className}`}
         />
       )}
     </>

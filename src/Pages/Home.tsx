@@ -1,9 +1,21 @@
 import PrimaryButton from "../Components/Buttons/PrimaryButton";
-import { webStackIcons } from "../../utils/techStackIcons";
+import { devStackIcons, designStackIcons } from "../../utils/techStackIcons";
 // import Box from "../Components/Utils/Box";
 import TechstackIcon from "../Components/Utils/TechstackIcon";
+import { useRef, useState } from "react";
 
 const Home = () => {
+
+  const myImageRef = useRef<HTMLImageElement>(null);
+  const [isMyImageVisible, setIsMyImageVisible] = useState(false);
+
+  const handleSeeMeButtonClick = () => {
+    if (!myImageRef.current) return;
+    const element = myImageRef.current;
+    setIsMyImageVisible(!isMyImageVisible);
+    element.style.opacity = element.style.opacity === '1' ? '0' : '1';
+  };
+
   return (
     <div className="bg-[var(--background-dark)] z-20 relative">
       {/* Hero Section */}
@@ -57,7 +69,7 @@ const Home = () => {
       <hr className="h-8 bg-[var(--foreground-color)]" />
       {/* About Section */}
       <section
-        className="h-auto md:max-h-screen relative overflow-hidden pt-24 w-screen"
+        className="h-auto md:max-h-screen relative overflow-hidden py-24 w-screen"
         id="about"
       >
         <div className="container mx-auto text-gray-400 ">
@@ -65,30 +77,29 @@ const Home = () => {
             <div className="col">
               <div className="grid gap-8">
                 <div
-                  className="p-8 relative overflow-hidden rounded-xl outline-1 outline-transparent 
-                hover:outline-white/50 transition-all ease-in-out duration-300 cursor-pointer 
-                hover:scale-102 group"
+                  className="p-8 relative overflow-hidden rounded-xl outline-1 outline-white/10 transition-all ease-in-out duration-300 cursor-pointer 
+                group"
                 >
-                  <img
+                  <img ref={myImageRef}
                     src="/images/my images/mine1.jpg"
-                    className="absolute inset-0 w-full h-full object-cover rounded-xl 
-               opacity-5 group-hover:opacity-20 
-               transition-all duration-300 ease-in-out grayscale-50 z-0"
+                    className="absolute inset-0 w-full h-full object-cover rounded-xl opacity-0 transition-all duration-300 ease-in-out z-0"
                   />
 
                   <div
-                    className="absolute inset-0 rounded-xl 
-               bg-transparent group-hover:bg-gradient-to-b 
-               from-black/40 to-transparent 
-               transition-all duration-300 z-10"
-                  ></div>
+                    className="absolute inset-0
+              z-10"
+                  >
+                    <button onClick={handleSeeMeButtonClick} title="See My Image" className={`px-2 py-1 text-sm cursor-pointer absolute right-0 bottom-0 ${isMyImageVisible && 'text-white bg-black/80 rounded-tl-md'}`}>
+                      <i className={`fa-regular ${isMyImageVisible ? 'fa-eye-slash' : 'fa-eye'}`}></i>
+                    </button>
+                  </div>
 
                   <div className="relative z-20">
-                    <h1 className="text-4xl font-bold lowercase text-white">
-                      About Me.
+                    <h1 className={`text-4xl font-bold lowercase ${isMyImageVisible ? 'text-[var(--foreground-color)]' : 'text-white'}`}>
+                      {isMyImageVisible ? 'this is me!':'about me'}
                     </h1>
 
-                    <p className="mt-4 text-justify text-xl">
+                    <p className={`mt-4 text-justify text-xl ${isMyImageVisible ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`}>
                       <span className="text-white">
                         I’m Abhijith Gaganan, a technology enthusiast with a
                         deep passion for creativity and design.
@@ -120,23 +131,25 @@ const Home = () => {
               </div>
             </div>
             {/* Tech Stack */}
-            <div className="col p-8 rounded-xl flex-col items-center">
+            <div className="col p-8 rounded-xl flex-col items-center  outline-1 outline-white/10">
               <h1 className="text-4xl font-bold lowercase text-white ">
                 Technologies i work with
               </h1>
               <div className="grid grid-cols-6 gap-4 mt-4">
                 <TechstackIcon text="Development" />
-                {Object.keys(webStackIcons).map((key) => (
+                {Object.keys(devStackIcons).map((key) => (
                   <TechstackIcon
                     key={key}
-                    imageUrl={webStackIcons[key as keyof typeof webStackIcons]}
+                    imageUrl={devStackIcons[key as keyof typeof devStackIcons]}
                   />
                 ))}
                 <TechstackIcon text="Designing" />
-                {Object.keys(webStackIcons).map((key) => (
+                {Object.keys(designStackIcons).map((key) => (
                   <TechstackIcon
                     key={key}
-                    imageUrl={webStackIcons[key as keyof typeof webStackIcons]}
+                    imageUrl={
+                      designStackIcons[key as keyof typeof designStackIcons]
+                    }
                   />
                 ))}
               </div>
@@ -144,6 +157,13 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <hr className="h-8 bg-[var(--foreground-color)]" />
+      {/* Projects Section */}
+      <section
+        className="h-auto md:max-h-screen relative overflow-hidden py-24 w-screen"
+        id="projects"
+      >1
+        swwd</section>
     </div>
   );
 };
