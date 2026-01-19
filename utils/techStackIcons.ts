@@ -1,5 +1,3 @@
-import { pre } from "framer-motion/client";
-
 export interface DevStackIcons {
     react: string;
     dotnet: string;
