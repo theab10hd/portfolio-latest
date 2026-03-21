@@ -37,7 +37,7 @@ export default function Contact() {
   };
 
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-screen w-full text-center flex flex-col justify-center" ref={sectionRef}>
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-8 min-h-screen w-full text-center flex flex-col justify-center" ref={sectionRef}>
       <div className="contact-elem inline-block self-center mb-4 rounded-full bg-green-500/10 px-3 py-1 text-sm font-medium text-green-400 ring-1 ring-inset ring-green-500/20">
         What's Next?
       </div>

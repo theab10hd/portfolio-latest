@@ -106,49 +106,57 @@ export default function MovingGrid() {
     };
 
     const techIcons = gsap.utils.toArray<HTMLElement>('.grid-tech-glow');
-    let lastIndex = -1;
-    let nextGlow: gsap.core.Tween | null = null;
+    const blinkingTimers: gsap.core.Tween[] = [];
 
-    const runRandomGlow = () => {
-      if (!techIcons.length) {
-        return;
-      }
+    techIcons.forEach((target) => {
+      const runUniqueBlink = () => {
+        if (!rootRef.current) return;
 
-      let nextIndex = Math.floor(Math.random() * techIcons.length);
-      if (techIcons.length > 1 && nextIndex === lastIndex) {
-        nextIndex = (nextIndex + 1) % techIcons.length;
-      }
+        const cols = Math.max(1, Math.floor(rootRef.current.clientWidth / size));
+        const rows = Math.max(1, Math.floor(rootRef.current.clientHeight / size));
 
-      lastIndex = nextIndex;
-      const target = techIcons[nextIndex];
+        const randomCol = Math.floor(Math.random() * cols);
+        const randomRow = Math.floor(Math.random() * rows);
 
-      gsap.fromTo(
-        target,
-        {
-          opacity: Number(target.dataset.baseOpacity ?? 0.2),
-          filter: 'drop-shadow(0 0 0 rgba(10,194,8,0))',
-        },
-        {
-          opacity: 1,
-          filter: 'drop-shadow(0 0 14px rgba(10,194,8,0.85))',
-          duration: 1,
-          yoyo: true,
-          repeat: 1,
-          ease: 'sine.inOut',
-          onComplete: () => {
-            nextGlow = gsap.delayedCall(gsap.utils.random(3.5, 5), runRandomGlow);
+        const snappedLeft = `${randomCol * size + size / 2}px`;
+        const snappedTop = `${randomRow * size + size / 2}px`;
+
+        target.style.left = snappedLeft;
+        target.style.top = snappedTop;
+        
+        gsap.fromTo(
+          target,
+          {
+            opacity: 0,
+            filter: 'drop-shadow(0 0 0 rgba(10,194,8,0))',
           },
-        }
-      );
-    };
+          {
+            opacity: 1,
+            filter: 'drop-shadow(0 0 10px rgba(10,194,8,0.9))',
+            duration: 0.8,
+            yoyo: true,
+            repeat: 1,
+            repeatDelay: 1,
+            ease: 'power1.inOut',
+            onComplete: () => {
+              gsap.set(target, { opacity: 0 });
+              // Wait for a random time before appearing again (e.g. 0.5s to 4s)
+              blinkingTimers.push(gsap.delayedCall(Math.random() * 3.5 + 0.5, runUniqueBlink));
+            },
+          }
+        );
+      };
+
+      // Start each icon with a random initial delay so they don't all appear at once (0s to 4s initial delay)
+      blinkingTimers.push(gsap.delayedCall(Math.random() * 4, runUniqueBlink));
+    });
 
     // Softly spawn a new subtle tracer every 300ms
     const interval = setInterval(createTracer, 300);
-    runRandomGlow();
 
     return () => {
       clearInterval(interval);
-      nextGlow?.kill();
+      blinkingTimers.forEach(t => t.kill());
       resizeObserver.disconnect();
     };
   }, [isMdUp]);
@@ -200,9 +208,8 @@ export default function MovingGrid() {
           return (
             <div
               key={tech.name}
-              className="grid-tech-glow absolute flex h-10 w-10 -translate-x-1/2 -translate-y-1/2 items-center justify-center"
-              data-base-opacity={baseOpacity}
-              style={{ top: snappedTop, left: snappedLeft, opacity: baseOpacity }}
+              className="grid-tech-glow absolute flex h-10 w-10 -translate-x-1/2 -translate-y-1/2 items-center justify-center opacity-0"
+              style={{ top: snappedTop, left: snappedLeft }}
             >
               <i className={tech.icon} style={{ fontSize: `${fittedSize}px`, lineHeight: 1, color: 'rgb(10 194 8 / 0.85)' }} />
             </div>
