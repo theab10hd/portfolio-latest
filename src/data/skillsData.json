@@ -1,0 +1,42 @@
+[
+  {
+    "category": "Development",
+    "items": [
+      "React",
+      ".NET",
+      "Tailwind CSS",
+      "Bootstrap",
+      "TypeScript",
+      "Java",
+      "C#",
+      "JavaScript",
+      "HTML5",
+      "Laravel",
+      "CSS3",
+      "Git"
+    ]
+  },
+  {
+    "category": "Designing",
+    "items": [
+      "Premiere Pro",
+      "After Effects",
+      "Photoshop",
+      "Lightroom",
+      "Illustrator",
+      "Figma",
+      "Canva"
+    ]
+  },
+  {
+    "category": "AI Workflows",
+    "items": [
+      "GitHub Copilot",
+      "ChatGPT",
+      "Claude",
+      "Antigravity",
+      "Cursor",
+      "Gemini"
+    ]
+  }
+]

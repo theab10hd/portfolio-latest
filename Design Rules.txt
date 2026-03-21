@@ -1,2 +1,0 @@
-Rounded Class
-- rounded-xl | .75rem

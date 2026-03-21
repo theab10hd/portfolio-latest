@@ -1,51 +1,52 @@
-import { useEffect } from "react";
-import { Route, Routes, useLocation } from "react-router-dom";
-import PageNotFound from "./Pages/PageNotFound";
-import Home from "./Pages/Home";
-import Contact from "./Pages/Contact";
-import Navbar from "./Components/Navbar/Navbar";
-// import DevModePrompt from "./Components/DevModePrompt";
-// import { SmoothCursor } from "./Components/ui/smooth-cursor";
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
+import Layout from './components/layout/Layout.tsx';
+import Home from './pages/Home.tsx';
+import About from './pages/About.tsx';
+import Projects from './pages/Projects.tsx';
+import Experience from './pages/Experience.tsx';
+import Contact from './pages/Contact.tsx';
 
-const App = () => {
-  // Change Document Title Based on Route
+function App() {
   const location = useLocation();
-  // const [acceptedDevMode, setAcceptedDevMode] = useState(false);
+
+  // Scroll to top and set dynamic title on route change
   useEffect(() => {
-    const path = location.pathname;
-    switch (path) {
-      case "/":
-        document.title = "Web + Graphic Designer | Abhijith Gaganan";
+    window.scrollTo(0, 0);
+
+    const baseName = 'Abhijith Gaganan';
+    switch (location.pathname) {
+      case '/':
+        document.title = `Web + Graphic Designer - ${baseName}`;
         break;
-      case "/contact":
-        document.title = "Contact | Abhijith Gaganan";
+      case '/about':
+        document.title = `About | ${baseName}`;
+        break;
+      case '/projects':
+        document.title = `Projects | ${baseName}`;
+        break;
+      case '/experience':
+        document.title = `Experience | ${baseName}`;
+        break;
+      case '/contact':
+        document.title = `Contact | ${baseName}`;
         break;
       default:
-        document.title = "404 Not Found | Abhijith Gaganan";
+        document.title = `Web + Graphic Designer - ${baseName}`;
     }
-  });
-
-  // const isDevMode = import.meta.env.VITE_IS_IN_DEVELOPMENT;
+  }, [location.pathname]);
 
   return (
-    <>
-      {/* <SmoothCursor /> */}
-      {/* {isDevMode && !acceptedDevMode && (
-        <DevModePrompt
-          title="Developer Mode Enabled"
-          message="This website is still under Development and you are running this portfolio in developer mode. Some features may not work as expected. Do you want to proceed?"
-          onConfirm={() => setAcceptedDevMode(true)}
-          onCancel={() => setAcceptedDevMode(true)}
-        />
-      )} */}
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<PageNotFound />} />
-      </Routes>
-    </>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="projects" element={<Projects />} />
+        <Route path="experience" element={<Experience />} />
+        <Route path="contact" element={<Contact />} />
+      </Route>
+    </Routes>
   );
-};
+}
 
 export default App;

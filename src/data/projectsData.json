@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Modern E-Commerce",
+    "description": "A high-performance storefront with dark mode and dynamic cart features.",
+    "tech": [
+      "React",
+      "Tailwind CSS",
+      "Zustand"
+    ],
+    "link": "https://github.com",
+    "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=600&auto=format&fit=crop"
+  },
+  {
+    "id": 2,
+    "title": "Interactive Dashboard",
+    "description": "Data visualization admin panel with rich animated charts.",
+    "tech": [
+      "React",
+      "GSAP",
+      "Chart.js"
+    ],
+    "link": "https://github.com",
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop"
+  },
+  {
+    "id": 3,
+    "title": "Creative Portfolio",
+    "description": "Minimalist developer portfolio focusing on smooth scroll reveals.",
+    "tech": [
+      "React",
+      "Vite",
+      "Framer Motion"
+    ],
+    "link": "https://github.com",
+    "image": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=600&auto=format&fit=crop"
+  }
+]

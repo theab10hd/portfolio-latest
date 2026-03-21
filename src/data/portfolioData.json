@@ -1,0 +1,17 @@
+{
+  "personal": {
+    "name": "Abhijith Gaganan",
+    "role": "Software Engineer",
+    "tagline": "Building scalable web apps and designs, while continuously learning.",
+    "email": "theab10hd@gmail.com",
+    "github": "https://github.com/theab10hd",
+    "linkedin": "https://www.linkedin.com/in/abhijith-gaganan/"
+  },
+  "about": {
+    "background": [
+      "I’m Abhijith Gaganan, a technology enthusiast with a deep passion for creativity and design. I love blending logic and artistry—whether it’s building functional, elegant websites or crafting eye-catching graphic designs that tell a story.",
+      "I currently work full-time as a Software Engineer, where I focus on creating efficient, user-friendly solutions. Alongside my job, I take on freelance projects in web and graphic design, helping brands bring their ideas to life through clean code and thoughtful visuals.",
+      "For me, technology isn’t just a career—it’s a creative playground. I’m always learning, experimenting, and pushing myself to build meaningful digital experiences that connect people and ideas. I actively integrate AI-driven development tools into my workflow to rapidly accelerate production speed without sacrificing code quality or design precision."
+    ]
+  }
+}
