@@ -203,8 +203,7 @@ export default function MovingGrid() {
           const fittedSize = Math.max(20, Math.min(30, Math.round(tech.iconSize * 0.75)));
           const snappedLeft = `${col * size + size / 2}px`;
           const snappedTop = `${row * size + size / 2}px`;
-          const baseOpacity = Math.max(0.5, tech.opacity);
-
+          
           return (
             <div
               key={tech.name}
