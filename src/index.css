@@ -37,14 +37,14 @@
 
 @layer utilities {
   .glass {
-    @apply bg-gray-900/10 backdrop-blur-md border border-white/10;
+    @apply bg-gray-900/10! backdrop-blur-md border border-white/10;
   }
 
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-gray-50 to-gray-400;
+    @apply bg-clip-text text-transparent bg-linear-to-r from-gray-50 to-gray-400;
   }
 
   .text-gradient-green {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-green-500;
+    @apply bg-clip-text text-transparent bg-linear-to-r from-green-400 to-green-500;
   }
 }

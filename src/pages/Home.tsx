@@ -19,7 +19,7 @@ export default function Home() {
   }, []);
 
   return (
-    <section className="max-w-7xl mx-auto w-full flex-grow flex flex-col justify-center px-4 sm:px-6 lg:px-8 pt-24 pb-8 min-h-screen" ref={heroRef}>
+    <section className="max-w-7xl mx-auto w-full grow flex flex-col justify-center px-4 sm:px-6 lg:px-8 pt-24 pb-8 min-h-screen" ref={heroRef}>
       <div className="max-w-4xl mx-auto text-center">
         <div className="hero-elem mb-6 inline-block rounded-full bg-green-500/10 px-4 py-1.5 text-sm font-medium text-green-400 ring-1 ring-inset ring-green-500/20">
           Available for freelance work

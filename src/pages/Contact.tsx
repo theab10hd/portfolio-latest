@@ -37,8 +37,8 @@ export default function Contact() {
   };
 
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-24 w-full text-center" ref={sectionRef}>
-      <div className="contact-elem inline-block mb-4 rounded-full bg-green-500/10 px-3 py-1 text-sm font-medium text-green-400 ring-1 ring-inset ring-green-500/20">
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-screen w-full text-center flex flex-col justify-center" ref={sectionRef}>
+      <div className="contact-elem inline-block self-center mb-4 rounded-full bg-green-500/10 px-3 py-1 text-sm font-medium text-green-400 ring-1 ring-inset ring-green-500/20">
         What's Next?
       </div>
       <h2 className="contact-elem text-2xl md:text-3xl lg:text-4xl font-black tracking-tight mb-6 text-gray-50">
@@ -54,6 +54,13 @@ export default function Contact() {
           <i className="fa-solid fa-circle-check text-5xl text-green-500 mb-2" />
           <h3 className="text-2xl font-bold text-gray-50">Message Sent!</h3>
           <p className="text-gray-400">Thanks for reaching out. I'll get back to you soon.</p>
+          <button
+            type="button"
+            onClick={() => setStatus(null)}
+            className="rounded-xl border border-green-500/50 px-5 py-2.5 text-sm font-semibold text-green-400 transition-colors hover:bg-green-500/10"
+          >
+            Submit another response
+          </button>
         </div>
       ) : (
         <form
@@ -62,7 +69,7 @@ export default function Contact() {
           data-netlify="true"
           data-netlify-honeypot="bot-field"
           onSubmit={handleSubmit}
-          className="contact-elem max-w-lg mx-auto space-y-6 text-left"
+          className="contact-elem w-full max-w-2xl mx-auto space-y-6 text-left"
         >
           <input type="hidden" name="form-name" value="contact" />
           <p className="hidden">

@@ -1,0 +1,138 @@
+[
+  {
+    "name": "React",
+    "icon": "fa-brands fa-react",
+    "top": "23%",
+    "left": "20%",
+    "iconSize": 45,
+    "opacity": 0.24
+  },
+  {
+    "name": "Node.js",
+    "icon": "fa-brands fa-node-js",
+    "top": "20%",
+    "left": "86%",
+    "iconSize": 32,
+    "opacity": 0.29
+  },
+  {
+    "name": "TypeScript",
+    "icon": "fa-solid fa-code",
+    "top": "73%",
+    "left": "87%",
+    "iconSize": 26,
+    "opacity": 0.27
+  },
+  {
+    "name": "Git",
+    "icon": "fa-brands fa-git-alt",
+    "top": "40%",
+    "left": "66%",
+    "iconSize": 29,
+    "opacity": 0.25
+  },
+  {
+    "name": "JavaScript",
+    "icon": "fa-brands fa-js",
+    "top": "50%",
+    "left": "9%",
+    "iconSize": 31,
+    "opacity": 0.31
+  },
+  {
+    "name": "Figma",
+    "icon": "fa-brands fa-figma",
+    "top": "86%",
+    "left": "74%",
+    "iconSize": 41,
+    "opacity": 0.2
+  },
+  {
+    "name": "HTML5",
+    "icon": "fa-brands fa-html5",
+    "top": "76%",
+    "left": "20%",
+    "iconSize": 25,
+    "opacity": 0.22
+  },
+  {
+    "name": "CSS3",
+    "icon": "fa-brands fa-css3-alt",
+    "top": "14%",
+    "left": "34%",
+    "iconSize": 33,
+    "opacity": 0.26
+  },
+  {
+    "name": "Python",
+    "icon": "fa-brands fa-python",
+    "top": "16%",
+    "left": "58%",
+    "iconSize": 37,
+    "opacity": 0.28
+  },
+  {
+    "name": "Java",
+    "icon": "fa-brands fa-java",
+    "top": "26%",
+    "left": "76%",
+    "iconSize": 30,
+    "opacity": 0.24
+  },
+  {
+    "name": "PHP",
+    "icon": "fa-brands fa-php",
+    "top": "30%",
+    "left": "44%",
+    "iconSize": 34,
+    "opacity": 0.22
+  },
+  {
+    "name": "Laravel",
+    "icon": "fa-brands fa-laravel",
+    "top": "33%",
+    "left": "16%",
+    "iconSize": 35,
+    "opacity": 0.27
+  },
+  {
+    "name": "GitHub",
+    "icon": "fa-brands fa-github",
+    "top": "47%",
+    "left": "54%",
+    "iconSize": 29,
+    "opacity": 0.21
+  },
+  {
+    "name": "NPM",
+    "icon": "fa-brands fa-npm",
+    "top": "56%",
+    "left": "24%",
+    "iconSize": 39,
+    "opacity": 0.3
+  },
+  {
+    "name": "Sass",
+    "icon": "fa-brands fa-sass",
+    "top": "68%",
+    "left": "12%",
+    "iconSize": 27,
+    "opacity": 0.23
+  },
+  {
+    "name": "Bootstrap",
+    "icon": "fa-brands fa-bootstrap",
+    "top": "70%",
+    "left": "62%",
+    "iconSize": 30,
+    "opacity": 0.22
+  },
+  {
+    "name": "Database",
+    "icon": "fa-solid fa-database",
+    "top": "82%",
+    "left": "56%",
+    "iconSize": 31,
+    "opacity": 0.24
+  }
+]
