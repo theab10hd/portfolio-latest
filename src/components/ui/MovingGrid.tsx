@@ -16,9 +16,26 @@ export default function MovingGrid() {
   const containerRef = useRef<HTMLDivElement>(null);
   const floatingTech = floatingTechData as FloatingTech[];
   const [gridMetrics, setGridMetrics] = useState({ cols: 1, rows: 1 });
+  const [isMdUp, setIsMdUp] = useState(() => window.matchMedia('(min-width: 768px)').matches);
 
   const size = 40;
   const usedCells = new Set<string>();
+  const visibleTech = isMdUp ? floatingTech : floatingTech.slice(0, 4);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(min-width: 768px)');
+
+    const handleChange = (event: MediaQueryListEvent) => {
+      setIsMdUp(event.matches);
+    };
+
+    setIsMdUp(mediaQuery.matches);
+    mediaQuery.addEventListener('change', handleChange);
+
+    return () => {
+      mediaQuery.removeEventListener('change', handleChange);
+    };
+  }, []);
 
   useEffect(() => {
     if (!containerRef.current || !rootRef.current) return;
@@ -134,7 +151,7 @@ export default function MovingGrid() {
       nextGlow?.kill();
       resizeObserver.disconnect();
     };
-  }, []);
+  }, [isMdUp]);
 
   return (
     <div
@@ -150,7 +167,7 @@ export default function MovingGrid() {
 
       {/* Tech icons mapped onto the grid background */}
       <div className="absolute inset-0 z-20">
-        {floatingTech.map((tech) => {
+        {visibleTech.map((tech) => {
           const leftPercent = Number.parseFloat(tech.left);
           const topPercent = Number.parseFloat(tech.top);
           let col = Math.min(
