@@ -8,7 +8,7 @@
       "Bootstrap"
     ],
     "link": "https://theab10hd.github.io/Zomato-Like-Clone/",
-    "image": "public/project-images/zomato.png"
+    "image": "/project-images/zomato.png"
   },
   {
     "id": 2,
@@ -20,7 +20,7 @@
       "Tailwind CSS"
     ],
     "link": "https://theab10hd.github.io/Event-Management-Booking/",
-    "image": "public/project-images/e-events.png"
+    "image": "/project-images/e-events.png"
   },
   {
     "id": 3,
@@ -32,7 +32,7 @@
       "Tailwind CSS"
     ],
     "link": "https://unlockstory.netlify.app/",
-    "image": "public/project-images/unlockstory.png"
+    "image": "/project-images/unlockstory.png"
   },
   {
     "id": 4,
@@ -43,7 +43,7 @@
       "Bootstrap"
     ],
     "link": "https://polyportalstudents.netlify.app/",
-    "image": "public/project-images/polyportal.png"
+    "image": "/project-images/polyportal.png"
   },
    {
     "id": 5,
@@ -54,6 +54,6 @@
       "Tailwind CSS"
     ],
     "link": "https://tmdbmoviesearchapp.netlify.app/",
-    "image": "public/project-images/movie-search.png"
+    "image": "/project-images/movie-search.png"
   }
 ]
