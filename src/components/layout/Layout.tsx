@@ -2,10 +2,10 @@ import { Outlet } from 'react-router-dom';
 import Navbar from './Navbar.tsx';
 
 import MovingGrid from '../ui/MovingGrid.tsx';
-
+import AnimatedCursor from 'react-animated-cursor';
 export default function Layout() {
   return (
-    <div className="min-h-screen flex flex-col items-center w-full overflow-x-hidden origin-top cursor-default">
+    <div className="min-h-screen flex flex-col items-center w-full overflow-x-hidden origin-top cursor-none">
       {/* Background gradients for Tailwind aesthetic */}
       <div className="fixed inset-0 z-0 pointer-events-none">
         <MovingGrid />
@@ -14,6 +14,29 @@ export default function Layout() {
       </div>
 
       <Navbar />
+      <AnimatedCursor
+        innerSize={8}
+        outerSize={35}
+        innerScale={2}
+        outerScale={2}
+        outerAlpha={0}
+        innerStyle={{
+          border: '1px solid rgba(6, 146, 62, 1)',
+          backgroundColor: '#06923e'
+        }}
+        outerStyle={{
+          border: '1px solid rgba(6, 146, 62, 1)',
+          backgroundColor: 'transparent'
+        }}
+        clickables={[
+          'a',
+          'button',
+          '.link',
+          'input',
+          'textarea'
+        ]}
+      />
+
       <main className="flex-grow w-full flex flex-col z-10">
         <Outlet />
       </main>

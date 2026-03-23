@@ -85,7 +85,7 @@ export default function Contact() {
               name="name"
               required
               className="w-full glass bg-gray-900/50 border border-white/10 rounded-xl px-4 py-3 text-gray-100 focus:outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-colors"
-              placeholder="John Doe"
+              placeholder="Nandana"
             />
           </div>
           <div className="space-y-2">
@@ -96,7 +96,7 @@ export default function Contact() {
               name="email"
               required
               className="w-full glass bg-gray-900/50 border border-white/10 rounded-xl px-4 py-3 text-gray-100 focus:outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-colors"
-              placeholder="john@example.com"
+              placeholder="nandana@example.com"
             />
           </div>
           <div className="space-y-2">
@@ -107,7 +107,7 @@ export default function Contact() {
               required
               rows={5}
               className="w-full glass bg-gray-900/50 border border-white/10 rounded-xl px-4 py-3 text-gray-100 focus:outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-colors resize-none"
-              placeholder="Hi there..."
+              placeholder="Hi Abhijith, I really like your portfolio! I'd love to connect and discuss potential opportunities."
             />
           </div>
           {status === 'error' && (

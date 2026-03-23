@@ -1,38 +1,59 @@
 [
   {
     "id": 1,
-    "title": "Modern E-Commerce",
-    "description": "A high-performance storefront with dark mode and dynamic cart features.",
+    "title": "Zomato Clone (Ui)",
+    "description": "A responsive frontend for a restaurant discovery app built with Bootstrap 5, featuring a modern, grid-based layout and user-friendly design.",
     "tech": [
       "React",
-      "Tailwind CSS",
-      "Zustand"
+      "Bootstrap"
     ],
-    "link": "https://github.com",
-    "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=600&auto=format&fit=crop"
+    "link": "https://theab10hd.github.io/Zomato-Like-Clone/",
+    "image": "public/project-images/zomato.png"
   },
   {
     "id": 2,
-    "title": "Interactive Dashboard",
-    "description": "Data visualization admin panel with rich animated charts.",
+    "title": "Elite Events",
+    "description": "Elite Events is a top event management company known for crafting exceptional, memorable experiences.",
     "tech": [
       "React",
       "GSAP",
-      "Chart.js"
+      "Tailwind CSS"
     ],
-    "link": "https://github.com",
-    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop"
+    "link": "https://theab10hd.github.io/Event-Management-Booking/",
+    "image": "public/project-images/e-events.png"
   },
   {
     "id": 3,
-    "title": "Creative Portfolio",
-    "description": "Minimalist developer portfolio focusing on smooth scroll reveals.",
+    "title": "Unlock Story",
+    "description": "Minimalist portfolio for a Multimedia Company with GSAP animations focusing on smooth transitions and a clean design to showcase projects effectively.",
     "tech": [
       "React",
-      "Vite",
-      "Framer Motion"
+      "GSAP",
+      "Tailwind CSS"
     ],
-    "link": "https://github.com",
-    "image": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=600&auto=format&fit=crop"
+    "link": "https://unlockstory.netlify.app/",
+    "image": "public/project-images/unlockstory.png"
+  },
+  {
+    "id": 4,
+    "title": "Poly Portal",
+    "description": "PolyPortal is a comprehensive website offering study notes and module resources specifically tailored for diploma students.",
+    "tech": [
+      "React",
+      "Bootstrap"
+    ],
+    "link": "https://polyportalstudents.netlify.app/",
+    "image": "public/project-images/polyportal.png"
+  },
+   {
+    "id": 5,
+    "title": "Movie Search App",
+    "description": "A simple movie search application that allows users to discover and explore movies using the TMDB API.",
+    "tech": [
+      "React",
+      "Tailwind CSS"
+    ],
+    "link": "https://tmdbmoviesearchapp.netlify.app/",
+    "image": "public/project-images/movie-search.png"
   }
 ]

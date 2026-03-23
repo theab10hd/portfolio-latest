@@ -37,7 +37,7 @@ export default function Projects() {
         {projects.map((project, index) => (
           <div
             key={project.id || index}
-            className="project-anim group flex flex-col glass rounded-2xl overflow-hidden shadow-xl shadow-green-900/5 hover:-translate-y-2 transition-all duration-300 w-full"
+            className="project-anim group flex flex-col glass rounded-2xl overflow-hidden border border-white/5 shadow-xl hover:border-green-500/30 hover:-translate-y-2 transition-all duration-300 relative w-full"
           >
             <div className="relative h-56 md:h-64 overflow-hidden bg-gray-900/50">
               <div className="absolute inset-0 bg-green-500/20 group-hover:bg-transparent transition-all z-10 duration-500 mix-blend-overlay" />
@@ -63,7 +63,7 @@ export default function Projects() {
                     </a>
                   </div>
                 </div>
-                <p className="text-sm md:text-base text-gray-400 leading-relaxed bg-black/40 p-3 rounded-lg border border-white/5">
+                <p className="text-sm md:text-base text-gray-400 leading-relaxed">
                   {project.description}
                 </p>
               </div>
