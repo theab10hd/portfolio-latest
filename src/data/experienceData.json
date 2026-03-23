@@ -6,9 +6,9 @@
     "period": "Jun 2025 - Present",
     "description": "Currently working as a Junior Software Engineer Trainee at zLink, Inc., where I'm learning new technologies like ASP.NET and gaining my first hands-on experience being part of a professional development team.",
     "images": [
-      "https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=400&h=300&fit=crop",
-      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&h=300&fit=crop",
-      "https://images.unsplash.com/photo-1627398246454-e4a836ab4d84?w=400&h=300&fit=crop"
+      "/experience-images/zlink/zlink-1.jpg",
+      "/experience-images/zlink/zlink-2.jpg",
+      "/experience-images/zlink/zlink-3.jpg"
     ]
   },
   {
@@ -18,9 +18,11 @@
     "period": "Oct 2023 - Jun 2025",
     "description": "Worked as a freelance Video and Graphic Designer, creating visually engaging content for clients across various industries. Designed logos, social media posts, brochures, and promotional materials using Adobe Creative Cloud.",
     "images": [
-      "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=400&h=300&fit=crop",
-      "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400&h=300&fit=crop",
-      "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=300&fit=crop"
+      "/experience-images/graphic-designing/graphic-design-1.jpg",
+      "/experience-images/graphic-designing/graphic-design-2.jpg",
+      "/experience-images/graphic-designing/graphic-design-3.jpg",
+      "/experience-images/graphic-designing/graphic-design-4.jpg",
+      "/experience-images/graphic-designing/graphic-design-5.jpg"
     ]
   },
   {
@@ -37,11 +39,7 @@
     "company": "Flame Video Editing",
     "period": "Jan 2019 - Jan 2024",
     "description": "Worked as a freelance Video Editor, successfully delivering 30+ projects for clients across YouTube, Instagram, and other platforms. Created engaging and high-retention videos.",
-    "images": [
-      "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=400&h=300&fit=crop",
-      "https://images.unsplash.com/photo-1536240478700-b869070f9279?w=400&h=300&fit=crop",
-      "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=400&h=300&fit=crop"
-    ]
+    "images": []
   },
   {
     "id": 5,
@@ -49,10 +47,6 @@
     "company": "Techoriz Digital Solutions",
     "period": "May 2023",
     "description": "Completed a 1-month internship at Techoriz Digital Academy in 2023, where I was introduced to Full Stack PHP Development with a strong focus on the Laravel framework.",
-    "images": [
-      "https://images.unsplash.com/photo-1599839619722-39751411ea63?w=400&h=300&fit=crop",
-      "https://images.unsplash.com/photo-1555099962-4199c345e5dd?w=400&h=300&fit=crop",
-      "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=300&fit=crop"
-    ]
+    "images": []
   }
 ]

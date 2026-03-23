@@ -85,7 +85,7 @@ export default function Contact() {
               name="name"
               required
               className="w-full glass bg-gray-900/50 border border-white/10 rounded-xl px-4 py-3 text-gray-100 focus:outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-colors"
-              placeholder="Nandana"
+              placeholder="Nandhu S"
             />
           </div>
           <div className="space-y-2">
